@@ -75,7 +75,7 @@
         .projects-title {
             position: absolute;
             width: 11vw;
-            top: 2.5vw;
+            top: 5vw;
             left: 50%;
             z-index: -1;
             display: flex;
