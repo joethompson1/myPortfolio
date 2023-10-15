@@ -930,9 +930,9 @@
     </section>
     
     <div class="footer">
-        <h1>LinkedIn</h1>
-        <h1>Github</h1>
-        <h1>CV</h1>
+        <a href="https://www.linkedin.com/in/1joethompson/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/joethompson1/" target="_blank">Github</a>
+        <a href="https://drive.google.com/file/d/1YLfmQNUeXlMhRWCQSfrkbK9_W-NvcBA6/view?usp=sharing" target="_blank">CV</a>
     </div>
 </template>
 
@@ -1330,17 +1330,19 @@
         // gap: 10%;
         // padding: 10%;
 
-        h1 {
+        a {
             flex: 1;
             text-align: center;
             font-size: 1vw;
             padding: 2vw 0;
             color: var(--color-red);
             cursor: pointer;
+            text-decoration: none;
 
             &:hover {
                 background: var(--color-red);
                 color: white;
+                text-decoration: underline
             }
 
         }
