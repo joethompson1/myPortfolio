@@ -20,7 +20,7 @@
     import IconCheckMark from "../components/icons/IconCheckMark.vue";
 
     const experienceSection = ref(null);
-    const hookScrollPosition = ref();
+    const hookScrollPosition = ref(0);
     const conjoinContainer = ref(null);
     const conjoinContainerPos = ref(0);
     const ibmContainer = ref(null);
