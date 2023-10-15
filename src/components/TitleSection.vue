@@ -171,7 +171,7 @@
 
                 .fishingRod {
                     left: -8.2%;
-                    top: -145%;
+                    top: -143%;
                     width: 60vw;
                 }
             }
