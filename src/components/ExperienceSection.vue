@@ -183,13 +183,13 @@
             <div class="title-container">
                 <h1 class="title">Coinjoin AI</h1>
                 <h2 class="role">Software Engineering Consultant</h2>
-                <p class="dates">June 2023 - Present</p>
+                <p class="dates">May 2023 - Present</p>
             </div>
 
             <div class="content-container">
                 <p class="description">
-                    I collaborate with the CEO and a professor of cognitive
-                    science to create a demo showcasing a personal AI healthcare
+                    I collaborate with a former NASDAQ CEO and a professor of cognitive
+                    science to create demos showcasing a personal AI healthcare
                     assistant and a consumer reasoning engine. Our goal is to
                     secure funding for the initial seed round.
                     <br /><br />
