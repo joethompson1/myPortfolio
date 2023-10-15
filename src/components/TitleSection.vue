@@ -165,13 +165,13 @@
 
                 .fisherThem {
                     left: 12%;
-                    top: -45%;
+                    top: -44%;
                     width: 30vw;
                 }
 
                 .fishingRod {
                     left: -8.2%;
-                    top: -148%;
+                    top: -147%;
                     width: 60vw;
                 }
             }
