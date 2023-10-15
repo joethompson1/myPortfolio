@@ -75,12 +75,13 @@
         .projects-title {
             position: absolute;
             width: 11vw;
-            top: 5vw;
+            top: 8vw;
             left: 50%;
             z-index: -1;
             display: flex;
             flex-direction: column;
             z-index: 10;
+            opacity: 0.3;
 
             .arrow-container {
                 position: relative;
@@ -152,4 +153,58 @@
             transform: translateY(0) rotate(0deg);
         }
     }
+
+
+/* ------------------ Media Queries (Medium devices) -------------------- */
+@media screen and (max-width: 1024px) {
+    .title-section {
+
+        .title-container {
+
+            .fisherthem-container {
+
+                .fisherThem {
+                    left: 12%;
+                    top: -45%;
+                    width: 30vw;
+                }
+
+                .fishingRod {
+                    left: -8.2%;
+                    top: -148%;
+                    width: 60vw;
+                }
+            }
+
+            .title {
+                font-size: 6vw;
+            }
+        }
+
+        .projects-title {
+            width: 11vw;
+            top: 60%;
+
+            .arrow-container {
+
+                .arrow-body {
+                    height: 10vw;
+                    width: 0.3vw;
+
+                    .arrow-tip {
+                        top: 9vw;
+                        width: 0.3vw;
+                        height: 1vw;
+                    }
+                }
+            }
+
+            h1 {
+                font-size: 3.3vw;
+                top: -5vw;
+                left: -1vw;
+            }
+        }
+    }
+}
 </style>

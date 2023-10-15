@@ -20,7 +20,7 @@
     import IconCheckMark from "../components/icons/IconCheckMark.vue";
 
     const experienceSection = ref(null);
-    const currentScroll = ref();
+    const hookScrollPosition = ref();
     const conjoinContainer = ref(null);
     const conjoinContainerPos = ref(0);
     const ibmContainer = ref(null);
@@ -45,7 +45,7 @@
             const containerTop =
                 experienceSection.value.getBoundingClientRect().top +
                 window.scrollY;
-            currentScroll.value =
+            hookScrollPosition.value =
                 window.scrollY - containerTop + window.innerHeight / 2;
         }
         if (conjoinContainer.value) {
@@ -99,13 +99,11 @@
     }
 
     onMounted(() => {
-        window.addEventListener("scroll", () => {
-            scroll();
-        });
+        window.addEventListener("scroll", scroll);
     });
 
     onUnmounted(() => {
-        window.removeEventListener("scroll", scroll());
+        window.removeEventListener("scroll", scroll);
     });
 </script>
 
@@ -121,7 +119,7 @@
             <div
                 class="fishing-line"
                 :style="{
-                    height: currentScroll + 'px',
+                    height: hookScrollPosition + 'px',
                 }"
             >
                 <img class="fishing-hook" :src="hook" alt="" />
@@ -928,7 +926,14 @@
                 </div>
             </div>
         </div>
+
     </section>
+    
+    <div class="footer">
+        <h1>LinkedIn</h1>
+        <h1>Github</h1>
+        <h1>CV</h1>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -970,12 +975,13 @@
 
         .experience-title {
             position: absolute;
-            top: 10vw;
+            top: 5vw;
             left: 50%;
             width: 11vw;
             z-index: 0;
             display: flex;
             flex-direction: column;
+            opacity: 0.3;
 
             .arrow-container {
                 position: relative;
@@ -1126,7 +1132,7 @@
                 height: max-content;
                 border-radius: 3vw 3vw 0.5vw 4vw;
                 border-bottom: 0.5vw solid var(--color-red);
-                // margin-top: 8vw;
+                backdrop-filter: blur(2px);
 
                 .hackathon-group-image {
                     width: 100%;
@@ -1313,5 +1319,249 @@
                 }
             }
         }
+
     }
+    
+    .footer {
+        border-top: 1px solid var(--color-red);
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        // gap: 10%;
+        // padding: 10%;
+
+        h1 {
+            flex: 1;
+            text-align: center;
+            font-size: 1vw;
+            padding: 2vw 0;
+            color: var(--color-red);
+            cursor: pointer;
+
+            &:hover {
+                background: var(--color-red);
+                color: white;
+            }
+
+        }
+    }
+
+
+
+
+/* ------------------ Media Queries (Medium devices) -------------------- */
+@media screen and (max-width: 1024px) {
+
+    .experience-section {
+        padding: 12% 5%;
+
+        .fish-container {
+            top: 10vw;
+        }
+
+        .fishing-line {
+            position: absolute;
+            width: 0.05%;
+            left: 40%;
+            top: 0.2%;
+            height: 10%;
+            opacity: 0.8;
+            background: black;
+        }
+
+        .fishing-hook {
+            position: absolute;
+            bottom: calc(0% - 1.35vw);
+            left: -1490%;
+            width: 3000%;
+        }
+
+        .experience-title {
+            position: absolute;
+            top: 5vw;
+            left: 50%;
+            width: 11vw;
+
+            .arrow-container {
+
+                .arrow-body {
+                    left: 50%;
+                    height: 10vw;
+                    width: 0.3vw;
+
+                    .arrow-tip {
+                        top: 9vw;
+                        width: 0.3vw;
+                        height: 1vw;
+                    }
+                }
+            }
+
+            h1 {
+                font-size: 3.3vw;
+                top: 10vw;
+                left: -3vw;
+            }
+        }
+
+        .work-container {
+            flex-direction: column;
+            gap: 1vw;
+
+            .description {
+                font-size: 2vw;
+            }
+        }
+
+        .conjoin-container {
+
+            .title-container {
+                margin: auto 0;
+                // flex: 1;
+            }
+
+            .content-container {
+                // flex: 2;
+            }
+
+            .title {
+                font-size: 4.2vw;
+            }
+
+            .role {
+                font-size: 2.5vw;
+            }
+
+            .dates {
+                font-size: 2vw;
+            }
+        }
+
+        .ibm-container {
+
+            .whale {
+            }
+
+            .image-container {
+
+                .IBMSvg {
+                    transform: scale(2.5);
+                    width: 25%;
+                }
+            }
+
+            .text-container {
+
+                .title {
+                    font-size: 4.2vw;
+                }
+
+                .role {
+                    font-size: 2.5vw;
+                }
+
+                .dates {
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        .hackathon-container {
+
+            .title-container {
+
+                .hackathon-group-image {
+                }
+
+                h2 {
+                    font-size: 4.8vw;
+                }
+
+                .octopus {
+                }
+            }
+
+            .hackathon-tile {
+
+                .image-container {
+
+                    .hackathon-image {
+                    }
+                }
+
+                .contents-container {
+                    gap: 1vw;
+                    margin: 0;
+                    padding: 2vw 3vw 2vw 3vw;
+
+                    h2 {
+                        font-size: 2.2vw;
+                    }
+
+                    p {
+                        font-size: 1.9vw;
+                    }
+
+                    .prizes {
+                    }
+
+                    a {
+                        font-size: 1.9vw;
+                    }
+
+                    .technologies {
+
+                        span {
+                            font-size: 2vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        .experience-bg {
+        }
+
+        .languages-technologies-container {
+            flex-direction: column;
+
+            .container {
+
+                h3 {
+                    margin-bottom: 2vw;
+                    font-size: 2.8vw;
+                }
+
+                .details-container {
+                    gap: 2vw;
+
+                    .details {
+                        gap: 2vw;
+
+                        .check-icon {
+                            width: 2.75vw;
+                        }
+
+                        h4 {
+                            font-size: 2vw;
+                        }
+
+                        .content {
+                            width: 80%;
+
+                            .progressBar {
+                                height: 1.5vw;
+                            }
+
+                            p {
+                                font-size: 1.9vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 </style>

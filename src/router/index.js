@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import AboutView from "../views/AboutView.vue";
+import DatachainView from "../views/DatachainView.vue";
+import SoulbounderView from "../views/SoulbounderView.vue";
+import PassTheTimeView from "../views/PassTheTimeView.vue";
+import PlantMedicView from "../views/PlantMedicView.vue";
+
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,9 +15,24 @@ const router = createRouter({
             component: HomeView,
         },
         {
-            path: "/about",
-            name: "about",
-            component: AboutView,
+            path: "/datachain",
+            name: "datachain",
+            component: DatachainView,
+        },
+        {
+            path: "/soulbounder",
+            name: "soulbounder",
+            component: SoulbounderView,
+        },
+        {
+            path: "/passthetime",
+            name: "passthetime",
+            component: PassTheTimeView,
+        },
+        {
+            path: "/plantmedic",
+            name: "plantmedic",
+            component: PlantMedicView,
         },
     ],
 });

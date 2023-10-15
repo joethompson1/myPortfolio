@@ -27,7 +27,7 @@ html {
 
 body {
     min-height: 100vh;
-    overflow: auto;
+/*    overflow: auto;*/
     color: var(--color-text);
     background: #2e3842;
     text-rendering: optimizeLegibility;
