@@ -6,7 +6,7 @@
     import monitor from '../assets/images/monitor.png';
     import phone from '../assets/images/iphone.png';
     import passTheTimeGooglePlayStore from '../assets/images/passTheTimeGooglePlayStore.png';
-    import passTheTimeImg from '../assets/images/PassTheTimeGameplay.png';
+    import passTheTimeImg from '../assets/images/passTheTimeGameplay.png';
     import IconBackArrow from '../components/icons/IconBackArrow.vue';
     import IconGithub from '../components/icons/IconGithub.vue';
     import IconGooglePlayStore from '../components/icons/IconGooglePlayStore.vue';
