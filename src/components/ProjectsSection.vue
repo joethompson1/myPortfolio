@@ -349,11 +349,6 @@
 
 
 /* ------------------ Media Queries (Medium devices) -------------------- */
-
-
-
-
-
 @media screen and (max-width: 1024px) {
     .project-section {
         min-height: 120vh;
@@ -516,11 +511,4 @@
 
 
 
-
-/* ------------------ Media Queries (Small devices) -------------------- */
-
-@media screen and (max-width: 600px) {
-
-    
-}
 </style>
