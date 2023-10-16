@@ -112,7 +112,7 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: src/assets/screenshotHomepage.png
+[product-screenshot]: src/assets/images/screenshotHomepage.png
 [NPM]: https://img.shields.io/badge/NPM-d90166?style=for-the-badge&logo=npm&logoColor=white
 [NPM-url]: https://www.npmjs.com/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
